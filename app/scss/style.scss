@@ -1,0 +1,56 @@
+$primaryBackground: #00171F;
+$secondaryBackground: #FFFFFF;
+$mainColor: #007AE7;
+$mainHighlight: #00A8E8;
+$mainVisited: #003459;
+
+body {
+    background-color: $primaryBackground;
+}
+
+header {
+    color: $secondaryBackground;
+    border-bottom: 1rem solid $mainColor;
+    h1{
+        font-size: 5rem;
+        margin: 1rem auto;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: $secondaryBackground;
+    }
+    ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        background-color: $mainVisited;
+        margin: 1rem 0 0;
+        li {
+            display: inline-block;
+            font-size: 2.5rem;
+            width: 30%;
+        }
+        .current {
+            background-color: $mainColor;
+        }
+        li:hover {
+            background-color: $mainHighlight;
+        }
+    }
+}
+
+#main-body {
+    background-color: $secondaryBackground;
+    padding: 2rem;
+    width: 100%;
+    h3 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+footer {
+    color: $secondaryBackground;
+    text-align: center;
+}

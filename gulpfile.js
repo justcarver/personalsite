@@ -8,7 +8,7 @@ var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-del = require('del')
+var del = require('del')
 // var concat = require('gulp-concat');
 // var jshint = require('gulp-jshint');
 
@@ -34,7 +34,7 @@ gulp.task('sass',function(){
 
 // HTML Task
 gulp.task('html',function(){
-    gulp.src('app/**/*.html')
+    gulp.src('app/*.html')
     .pipe(reload({stream:true}));
 });
 
@@ -85,7 +85,7 @@ gulp.task('build:serve',function(){
 gulp.task('watch',function(){
     gulp.watch('app/js/*.js', ['scripts']);
     gulp.watch('app/scss/*.scss', ['sass']);
-    gulp.watch('app/scss/*.html', ['html']);
+    gulp.watch('app/*.html', ['html']);
 });
 
 // Default Task
