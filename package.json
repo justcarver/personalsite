@@ -6,12 +6,21 @@
   "scripts": {
     "test": "make test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/perfectloser/personalsite.git"
+  }
   "keywords": [
     "npm"
   ],
   "author": "Justin Carver",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^1.2.0"
   }
 }
