@@ -55,3 +55,6 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+
+# specific files added by me
+*.min.js
