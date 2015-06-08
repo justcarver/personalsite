@@ -28,11 +28,28 @@ header {
 
 #main-body {
   background-color: #FFFFFF;
-  padding: 2rem;
-  width: 100%; }
+  padding: 2rem; }
   #main-body h3 {
+    font-size: 1.5rem;
     margin: 0;
     text-align: center; }
+  #main-body a {
+    color: #007AE7; }
+  #main-body a:visited {
+    color: #003459; }
+  #main-body a:hover {
+    color: #00A8E8; }
+  #main-body ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1rem; }
+    #main-body ul li {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto; }
+      #main-body ul li h4 {
+        padding: 0; }
 
 footer {
   color: #FFFFFF;
