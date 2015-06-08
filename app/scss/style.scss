@@ -1,3 +1,4 @@
+// Variable colors
 $primaryBackground: #00171F;
 $secondaryBackground: #FFFFFF;
 $mainColor: #007AE7;
@@ -8,64 +9,84 @@ body {
     background-color: $primaryBackground;
 }
 
+/* Styles for the Hearder area */
 header {
     color: $secondaryBackground;
     border-bottom: 1rem solid $mainColor;
+
     h1{
         font-size: 5rem;
         margin: 1rem auto;
         text-align: center;
     }
+
     a {
         text-decoration: none;
         color: $secondaryBackground;
+        display: block;
     }
+
     ul {
         list-style: none;
         text-align: center;
         padding: 0;
         background-color: $mainVisited;
         margin: 1rem 0 0;
+
         li {
             display: inline-block;
             font-size: 2.5rem;
             width: 30%;
         }
+
         .current {
             background-color: $mainColor;
         }
+
         li:hover {
             background-color: $mainHighlight;
         }
     }
 }
 
+/* Main styles for the Main Body of the site */
 #main-body {
     background-color: $secondaryBackground;
     padding: 2rem;
+
     h3 {
         font-size: 1.5rem;
         margin: 0;
         text-align: center;
     }
+
     a {
         color: $mainColor;
     }
+
     a:visited {
         color: $mainVisited;
     }
+
     a:hover {
         color: $mainHighlight;
     }
+
+   section {
+       clear: both;
+   }
+
     ul {
         list-style: none;
         padding: 1rem;
         margin: 0;
         font-size: 1rem;
+
         li {
             width: 80%;
             text-align: center;
             margin: 0 auto;
+
             h4 {
                 padding: 0;
             }
@@ -73,6 +94,7 @@ header {
     }
 }
 
+/* Main styles for the Footer */
 footer {
     color: $secondaryBackground;
     text-align: center;

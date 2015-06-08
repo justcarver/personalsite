@@ -9,7 +9,6 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var del = require('del')
-// var concat = require('gulp-concat');
 // var jshint = require('gulp-jshint');
 
 
@@ -25,7 +24,7 @@ gulp.task('scripts',function(){
 
 // Sass
 gulp.task('sass',function(){
-    gulp.src('app/scss/style.scss')
+    gulp.src('app/scss/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(gulp.dest('app/css'))

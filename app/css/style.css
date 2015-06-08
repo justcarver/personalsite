@@ -1,6 +1,7 @@
 body {
   background-color: #00171F; }
 
+/* Styles for the Hearder area */
 header {
   color: #FFFFFF;
   border-bottom: 1rem solid #007AE7; }
@@ -10,7 +11,8 @@ header {
     text-align: center; }
   header a {
     text-decoration: none;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    display: block; }
   header ul {
     list-style: none;
     text-align: center;
@@ -26,6 +28,7 @@ header {
     header ul li:hover {
       background-color: #00A8E8; }
 
+/* Main styles for the Main Body of the site */
 #main-body {
   background-color: #FFFFFF;
   padding: 2rem; }
@@ -39,6 +42,8 @@ header {
     color: #003459; }
   #main-body a:hover {
     color: #00A8E8; }
+  #main-body section {
+    clear: both; }
   #main-body ul {
     list-style: none;
     padding: 1rem;
@@ -51,6 +56,7 @@ header {
       #main-body ul li h4 {
         padding: 0; }
 
+/* Main styles for the Footer */
 footer {
   color: #FFFFFF;
   text-align: center; }
