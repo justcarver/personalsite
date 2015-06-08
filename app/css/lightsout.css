@@ -1,0 +1,28 @@
+#winDiv {
+  display: none;
+  text-align: center;
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  margin: 0 0 0 -30%;
+  padding: 5%;
+  border: 2px solid #00A8E8;
+  background-color: #FFFFFF; }
+
+#game {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap; }
+  #game div {
+    width: 16%;
+    height: 0;
+    padding-bottom: 16%;
+    margin: 2%;
+    background-color: #003459;
+    border-radius: 10px;
+    box-shadow: inset 0.25em 0.25em 5px #007AE7; }
+  #game .selected {
+    background-color: #00A8E8;
+    box-shadow: 0.25em 0.25em 5px #007AE7; }

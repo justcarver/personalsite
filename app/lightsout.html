@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lights Out Style Game - JustCarver.com</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lightsout.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">JustCarver.com</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main-body">
+            <section>
+                <h3>Light Out Style Game</h3>
+            </section>
+            <section>
+                <div id="score"><button id="newGame">New Game</button><span id="scoreDisplay">No. of Clicks:<span id="clickNumber"></span> </span></div>
+                    <div id="game">
+                        <div class="r1 c1" id="r1c1"></div>
+                        <div class="r1 c2" id="r1c2"></div>
+                        <div class="r1 c3" id="r1c3"></div>
+                        <div class="r1 c4" id="r1c4"></div>
+                        <div class="r1 c5" id="r1c5"></div>
+                        <div class="r2 c1" id="r2c1"></div>
+                        <div class="r2 c2" id="r2c2"></div>
+                        <div class="r2 c3" id="r2c3"></div>
+                        <div class="r2 c4" id="r2c4"></div>
+                        <div class="r2 c5" id="r2c5"></div>
+                        <div class="r3 c1" id="r3c1"></div>
+                        <div class="r3 c2" id="r3c2"></div>
+                        <div class="r3 c3" id="r3c3"></div>
+                        <div class="r3 c4" id="r3c4"></div>
+                        <div class="r3 c5" id="r3c5"></div>
+                        <div class="r4 c1" id="r4c1"></div>
+                        <div class="r4 c2" id="r4c2"></div>
+                        <div class="r4 c3" id="r4c3"></div>
+                        <div class="r4 c4" id="r4c4"></div>
+                        <div class="r4 c5" id="r4c5"></div>
+                        <div class="r5 c1" id="r5c1"></div>
+                        <div class="r5 c2" id="r5c2"></div>
+                        <div class="r5 c3" id="r5c3"></div>
+                        <div class="r5 c4" id="r5c4"></div>
+                        <div class="r5 c5" id="r5c5"></div>
+                    </div>
+                    <div id="winDiv"><span id="winMessage"></span></div>
+            </section>
+            <section>
+                <p>This is a puzzle game based on the old 90's electronic handheld game <a href="http://en.wikipedia.org/wiki/Lights_Out_%28game%29">Light's Out</a> by Tiger Electronics.  Created using Jquery.</p>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2015 Justin Carver</p>
+        </footer>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/game.min.js"></script>
+    </body
+</html>

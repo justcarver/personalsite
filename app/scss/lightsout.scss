@@ -1,0 +1,41 @@
+// Variable Colors
+$primaryBackground: #00171F;
+$secondaryBackground: #FFFFFF;
+$mainColor: #007AE7;
+$mainHighlight: #00A8E8;
+$mainVisited: #003459;
+
+#winDiv {
+    display: none;
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    margin: 0 0 0 -30%;
+    padding: 5%;
+    border: 2px solid $mainHighlight;
+    background-color: $secondaryBackground;    
+}
+
+#game {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    div {
+        width: 16%;
+        height: 0;
+        padding-bottom: 16%;
+        margin: 2%;
+        background-color: $mainVisited;
+        border-radius: 10px;
+        box-shadow: inset .25em .25em 5px $mainColor;
+    }
+
+    .selected {
+        background-color: $mainHighlight;
+        box-shadow: .25em .25em 5px $mainColor;
+    }
+}
