@@ -12,7 +12,7 @@ var del = require('del')
 // var jshint = require('gulp-jshint');
 
 
-// Concatonate our Javascript Files
+// Minify our Javascript Files
 gulp.task('scripts',function(){
     gulp.src(['app/js/**/*.js','!app/js/**/*.min.js'])
     .pipe(plumber())
