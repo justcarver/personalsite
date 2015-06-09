@@ -14,7 +14,29 @@ $mainVisited: #003459;
     margin: 0 0 0 -30%;
     padding: 5%;
     border: 2px solid $mainHighlight;
-    background-color: $secondaryBackground;    
+    background-color: $secondaryBackground;
+}
+
+#score {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+
+    button {
+        color: $secondaryBackground;
+        background-color: $mainColor;
+        padding: .5rem 1rem;
+    }
+
+   #scoreDisplay {
+        padding: .5rem 0 .5rem 1rem;
+    }
+
+    #clickNumber {
+        padding: .5rem 1rem .5rem 0;
+    }
 }
 
 #game {

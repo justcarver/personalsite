@@ -1,12 +1,14 @@
 body {
   background-color: #00171F; }
+  body p {
+    font-size: 1rem; }
 
 /* Styles for the Hearder area */
 header {
   color: #FFFFFF;
   border-bottom: 1rem solid #007AE7; }
   header h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 1rem auto;
     text-align: center; }
   header a {
@@ -21,7 +23,7 @@ header {
     margin: 1rem 0 0; }
     header ul li {
       display: inline-block;
-      font-size: 2.5rem;
+      font-size: 2rem;
       width: 30%; }
     header ul .current {
       background-color: #007AE7; }
@@ -52,9 +54,10 @@ header {
     #main-body ul li {
       width: 80%;
       text-align: center;
-      margin: 0 auto; }
+      margin: .5rem auto; }
       #main-body ul li h4 {
-        padding: 0; }
+        padding: 0;
+        margin: 0; }
 
 /* Main styles for the Footer */
 footer {

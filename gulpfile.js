@@ -9,9 +9,16 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var del = require('del')
-// var jshint = require('gulp-jshint');
+var jshint = require('gulp-jshint');
 
 
+// Lint Task
+gulp.task('lint',function(){
+    gulp.src(['app/js/**/*.js','!app/js/**/*.min.js'])
+    .pipe(plumber())
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
 // Minify our Javascript Files
 gulp.task('scripts',function(){
     gulp.src(['app/js/**/*.js','!app/js/**/*.min.js'])
@@ -88,4 +95,4 @@ gulp.task('watch',function(){
 });
 
 // Default Task
-gulp.task ('default',['scripts','sass','html','browser-sync','watch']);
+gulp.task ('default',['lint','scripts','sass','html','browser-sync','watch']);

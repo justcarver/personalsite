@@ -9,6 +9,21 @@
   border: 2px solid #00A8E8;
   background-color: #FFFFFF; }
 
+#score {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin: auto; }
+  #score button {
+    color: #FFFFFF;
+    background-color: #007AE7;
+    padding: 0.5rem 1rem; }
+  #score #scoreDisplay {
+    padding: 0.5rem 0 0.5rem 1rem; }
+  #score #clickNumber {
+    padding: 0.5rem 1rem 0.5rem 0; }
+
 #game {
   width: 100%;
   max-width: 500px;
