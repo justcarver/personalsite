@@ -1,14 +1,3 @@
-#winDiv {
-  display: none;
-  text-align: center;
-  width: 50%;
-  position: fixed;
-  left: 50%;
-  margin: 0 0 0 -30%;
-  padding: 5%;
-  border: 2px solid #00A8E8;
-  background-color: #FFFFFF; }
-
 #score {
   display: flex;
   justify-content: space-between;
@@ -18,7 +7,13 @@
   #score button {
     color: #FFFFFF;
     background-color: #007AE7;
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    box-shadow: 2px 3px 1px #005fb4;
+    border: 0; }
+  #score button:hover {
+    background-color: #005fb4;
+    box-shadow: 2px 3px 1px #004481; }
   #score #scoreDisplay {
     padding: 0.5rem 0 0.5rem 1rem; }
   #score #clickNumber {
@@ -38,6 +33,21 @@
     background-color: #003459;
     border-radius: 10px;
     box-shadow: inset 0.25em 0.25em 5px #007AE7; }
+  #game div:hover {
+    background-color: #00528c; }
   #game .selected {
     background-color: #00A8E8;
     box-shadow: 0.25em 0.25em 5px #007AE7; }
+  #game .selected:hover {
+    background-color: #1cc0ff; }
+
+#winDiv {
+  display: none;
+  text-align: center;
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  margin: auto 0 auto -30%;
+  padding: 5%;
+  border: 2px solid #00A8E8;
+  background-color: #FFFFFF; }

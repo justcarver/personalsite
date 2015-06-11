@@ -45,6 +45,7 @@ function $seedGame() {
 //Display the win message if all elements are not "selected"
 function $checkStatus() {
   'use strict';
+  console.log('Game is not clear: ' + $("#game div").hasClass("selected"));
   if ($("#game div").hasClass("selected")) {
     return;
   } else {

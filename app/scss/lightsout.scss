@@ -5,18 +5,6 @@ $mainColor: #007AE7;
 $mainHighlight: #00A8E8;
 $mainVisited: #003459;
 
-#winDiv {
-    display: none;
-    text-align: center;
-    width: 50%;
-    position: fixed;
-    left: 50%;
-    margin: 0 0 0 -30%;
-    padding: 5%;
-    border: 2px solid $mainHighlight;
-    background-color: $secondaryBackground;
-}
-
 #score {
     display: flex;
     justify-content: space-between;
@@ -28,6 +16,14 @@ $mainVisited: #003459;
         color: $secondaryBackground;
         background-color: $mainColor;
         padding: .5rem 1rem;
+        border-radius: 3px;
+        box-shadow: 2px 3px 1px darken($mainColor,10%);
+        border: 0;
+    }
+    
+    button:hover {
+        background-color: darken($mainColor,10%);
+        box-shadow: 2px 3px 1px darken($mainColor,20%);
     }
 
    #scoreDisplay {
@@ -56,8 +52,30 @@ $mainVisited: #003459;
         box-shadow: inset .25em .25em 5px $mainColor;
     }
 
+    div:hover {
+        background-color: lighten($mainVisited, 10%);
+    }
+
     .selected {
         background-color: $mainHighlight;
         box-shadow: .25em .25em 5px $mainColor;
     }
+
+    .selected:hover {
+        background-color: lighten($mainHighlight,10%);
+    }
 }
+
+#winDiv {
+    display: none;
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    margin: auto 0 auto -30%;
+    padding: 5%;
+    border: 2px solid $mainHighlight;
+    background-color: $secondaryBackground;
+}
+
+
