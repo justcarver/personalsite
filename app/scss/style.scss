@@ -34,13 +34,13 @@ header {
         list-style: none;
         text-align: center;
         padding: 0;
-        background-color: $mainVisited;
         margin: 1rem 0 0;
 
         li {
             display: inline-block;
             font-size: 2rem;
-            width: 30%;
+            width: 32%;
+            background-color: $mainVisited;
         }
 
         .current {
@@ -103,4 +103,31 @@ header {
 footer {
     color: $secondaryBackground;
     text-align: center;
+}
+
+
+/* Media Queries */
+@media all and (orientation:landscape) {
+    header {
+        clear: both;
+        height: 5rem;
+
+        h1 {
+            float: left;
+            display: block;
+            width: 45%;
+            clear: right;
+        }
+
+        ul {
+            display:inline-block;
+            width: 50%;
+            height: 4rem;
+
+            li {
+                margin: 1.6825rem 0 0 0;
+            }
+        }
+
+    }
 }

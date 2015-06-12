@@ -19,12 +19,12 @@ header {
     list-style: none;
     text-align: center;
     padding: 0;
-    background-color: #003459;
     margin: 1rem 0 0; }
     header ul li {
       display: inline-block;
       font-size: 2rem;
-      width: 30%; }
+      width: 32%;
+      background-color: #003459; }
     header ul .current {
       background-color: #007AE7; }
     header ul li:hover {
@@ -63,3 +63,20 @@ header {
 footer {
   color: #FFFFFF;
   text-align: center; }
+
+/* Media Queries */
+@media all and (orientation: landscape) {
+  header {
+    clear: both;
+    height: 5rem; }
+    header h1 {
+      float: left;
+      display: block;
+      width: 45%;
+      clear: right; }
+    header ul {
+      display: inline-block;
+      width: 50%;
+      height: 4rem; }
+      header ul li {
+        margin: 1.6825rem 0 0 0; } }
