@@ -78,6 +78,8 @@ header {
 
    section {
        clear: both;
+       max-width: 90%;
+       margin: auto;
    }
 
     ul {
@@ -90,11 +92,25 @@ header {
             width: 80%;
             text-align: center;
             margin: .5rem auto;
+            border: 2px solid $mainColor;
+            border-radius: 5px;
+            padding: 5px;
 
             h4 {
                 padding: 0;
                 margin: 0;
             }
+
+            .list-icon {
+                width: 75px;
+                height: 75px;
+                float: left;
+                padding: 0 5px 0 0;
+            }
+        }
+
+        li:hover {
+            border: 2px solid $mainHighlight;
         }
     }
 }
@@ -107,7 +123,7 @@ footer {
 
 
 /* Media Queries */
-@media all and (orientation:landscape) {
+@media all and (min-width:800px) {
     header {
         clear: both;
         height: 5rem;
@@ -128,6 +144,18 @@ footer {
                 margin: 1.6825rem 0 0 0;
             }
         }
+    }
 
+    section {
+        width: 80%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .column {
+        width: 45%;
+        display: inline-block;
+        padding: 0 2%;
+        margin: 0;
     }
 }

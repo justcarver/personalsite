@@ -45,7 +45,9 @@ header {
   #main-body a:hover {
     color: #00A8E8; }
   #main-body section {
-    clear: both; }
+    clear: both;
+    max-width: 90%;
+    margin: auto; }
   #main-body ul {
     list-style: none;
     padding: 1rem;
@@ -54,10 +56,20 @@ header {
     #main-body ul li {
       width: 80%;
       text-align: center;
-      margin: .5rem auto; }
+      margin: .5rem auto;
+      border: 2px solid #007AE7;
+      border-radius: 5px;
+      padding: 5px; }
       #main-body ul li h4 {
         padding: 0;
         margin: 0; }
+      #main-body ul li .list-icon {
+        width: 75px;
+        height: 75px;
+        float: left;
+        padding: 0 5px 0 0; }
+    #main-body ul li:hover {
+      border: 2px solid #00A8E8; }
 
 /* Main styles for the Footer */
 footer {
@@ -65,7 +77,7 @@ footer {
   text-align: center; }
 
 /* Media Queries */
-@media all and (orientation: landscape) {
+@media all and (min-width: 800px) {
   header {
     clear: both;
     height: 5rem; }
@@ -79,4 +91,13 @@ footer {
       width: 50%;
       height: 4rem; }
       header ul li {
-        margin: 1.6825rem 0 0 0; } }
+        margin: 1.6825rem 0 0 0; }
+  section {
+    width: 80%;
+    max-width: 600px;
+    margin: auto; }
+  .column {
+    width: 45%;
+    display: inline-block;
+    padding: 0 2%;
+    margin: 0; } }
