@@ -71,6 +71,16 @@ header {
     #main-body ul li:hover {
       border: 2px solid #00A8E8; }
 
+/* Styles for the Treehouse pie */
+.pieChart {
+  width: 6rem;
+  margin: 0 auto;
+  padding: 0; }
+
+.pie {
+  height: 5rem;
+  width: 5rem; }
+
 /* Main styles for the Footer */
 footer {
   color: #FFFFFF;

@@ -115,6 +115,22 @@ header {
     }
 }
 
+/* Styles for the Treehouse pie */
+$size-pie: 5rem;
+$size-width: 1rem;
+$size-inner: $size-pie - $size-width * 2;
+
+.pieChart {
+    width: $size-pie + 1rem;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.pie {
+    height: $size-pie;
+    width: $size-pie;
+}
+
 /* Main styles for the Footer */
 footer {
     color: $secondaryBackground;
