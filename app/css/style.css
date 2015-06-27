@@ -30,6 +30,11 @@ header {
     header ul li:hover {
       background-color: #00A8E8; }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* Main styles for the Main Body of the site */
 #main-body {
   background-color: #FFFFFF;
