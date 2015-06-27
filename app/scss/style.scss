@@ -53,6 +53,12 @@ header {
     }
 }
 
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* Main styles for the Main Body of the site */
 #main-body {
     background-color: $secondaryBackground;
