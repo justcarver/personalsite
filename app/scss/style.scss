@@ -129,14 +129,14 @@ header {
 }
 
 /* Styles for the Treehouse pie */
-$size-pie: 5rem;
-$size-width: 1.5rem;
+$size-pie: 7rem;
+$size-width: 2rem;
 $size-inner: $size-pie - $size-width * 2;
 
 .pieChart {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0;
 }
 
@@ -155,6 +155,7 @@ $size-inner: $size-pie - $size-width * 2;
         border-radius: 50%;
         top: $size-width;
         left: $size-width;
+        z-index: 1;
     }
 }
 
@@ -179,11 +180,14 @@ $size-inner: $size-pie - $size-width * 2;
 
 #chartLegend {
     list-style: none;
+    padding: 0;
+    margin-left: 2rem;
 
     li {
         border-left: 1em solid black;
         padding: 0 .5em;
         margin: .25em 0;
+        max-width: 250px;
 
         span {
             margin-left: 1em;
@@ -191,12 +195,6 @@ $size-inner: $size-pie - $size-width * 2;
             font-weight: bold;
         }
     }
-}
-
-.legend-icon {
-    width: 1em;
-    height: 0;
-    padding-bottom: 1em;
 }
 
 /* Main styles for the Footer */

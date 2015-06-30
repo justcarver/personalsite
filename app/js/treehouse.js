@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.getJSON('http://teamtreehouse.com/justincarver.json', function (treehouse) {
-        var offset = 0;
+        var offset = 0 - 1;
         var name = treehouse.name;
         var points = treehouse.points; /* Directs to the points object */
         var total = points.total; /* Gets your total number of points earned */
@@ -24,6 +24,8 @@ $(document).ready(function() {
         var pieHTML = "";
         var counter = 0;
         var sliceSize;
+        var sliceRoation;
+        var chartTotal = 0;
         var colors = {
             'Android' : '#5cb860',
             'Business' : '#f9845b',
@@ -43,14 +45,33 @@ $(document).ready(function() {
 
         $(".total").html(total);
 
+        for (var pointValue in points) {
+            chartTotal += points[pointValue]
+        }
+
+        chartTotal -= total;
+
         for (var key in pointsObj) {
             if (pointsObj[key] !== 0) {
+                var sliceCount = 0;
                 legendHtml += "<li style='border-color: " + colors[key] +"'>" + key;
                 legendHtml += "<span>" + pointsObj[key] + "</span></li>";
-                sliceSize = pointsObj[key] / total * 360;
-                if (sliceSize <= 179) {
-                } else {
-            }
+                sliceSize = pointsObj[key] / chartTotal;
+                sliceSize = sliceSize * 360;
+                sliceID = "s"+counter+"-"+sliceCount;
+                $(".pie").append("<div class='slice "+ sliceID + "'><span></span></div>");
+                $("."+sliceID).css({
+                    "transform" : "rotate("+ offset + "deg) translate3d(0,0,0)"
+                });
+                sliceRotation = 0 - 180;
+                sliceRotation += sliceSize;
+                $("."+sliceID+ " span").css ({
+                    "transform" : "rotate(" + sliceRotation + "deg) translate3d(0,0,0)",
+                    "background-color" : colors[key]
+                });
+                counter += 1;
+                console.log(sliceSize);
+                offset += sliceSize;
             }
         }
 

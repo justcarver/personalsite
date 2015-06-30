@@ -85,55 +85,54 @@ header {
 .pieChart {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 0; }
 
 .pie {
-  height: 5rem;
-  width: 5rem;
+  height: 7rem;
+  width: 7rem;
   position: relative; }
   .pie::before {
     content: "";
     display: block;
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     background: #FFFFFF;
     border-radius: 50%;
-    top: 1.5rem;
-    left: 1.5rem; }
+    top: 2rem;
+    left: 2rem;
+    z-index: 1; }
 
 .slice {
   position: absolute;
-  width: 5rem;
-  height: 5rem;
-  clip: rect(0px, 5rem, 5rem, 2.5rem); }
+  width: 7rem;
+  height: 7rem;
+  clip: rect(0px, 7rem, 7rem, 3.5rem); }
   .slice span {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     background-color: black;
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
-    clip: rect(0px, 5rem, 5rem, 2.5rem); }
+    clip: rect(0px, 7rem, 7rem, 3.5rem); }
 
 #chartLegend {
-  list-style: none; }
+  list-style: none;
+  padding: 0;
+  margin-left: 2rem; }
   #chartLegend li {
     border-left: 1em solid black;
     padding: 0 0.5em;
-    margin: .25em 0; }
+    margin: .25em 0;
+    max-width: 250px; }
     #chartLegend li span {
       margin-left: 1em;
       float: right;
       font-weight: bold; }
-
-.legend-icon {
-  width: 1em;
-  height: 0;
-  padding-bottom: 1em; }
 
 /* Main styles for the Footer */
 footer {
