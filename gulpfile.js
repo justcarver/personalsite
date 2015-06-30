@@ -10,7 +10,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var del = require('del')
 var jshint = require('gulp-jshint');
-
+var autoprefixer = require('gulp-autoprefixer');
 
 // Lint Task
 gulp.task('lint',function(){
@@ -34,6 +34,16 @@ gulp.task('sass',function(){
     gulp.src('app/scss/*.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(gulp.dest('app/css'))
+    .pipe(reload({stream:true}));
+});
+
+gulp.task('prefix',function () {
+    gulp.src('app/css/*.css')
+    .pipe(plumber())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions']
+        }))
     .pipe(gulp.dest('app/css'))
     .pipe(reload({stream:true}));
 });
@@ -95,4 +105,4 @@ gulp.task('watch',function(){
 });
 
 // Default Task
-gulp.task ('default',['lint','scripts','sass','html','browser-sync','watch']);
+gulp.task ('default',['lint','scripts','sass','prefix','html','browser-sync','watch']);

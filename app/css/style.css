@@ -43,6 +43,11 @@ header {
     font-size: 1.5rem;
     margin: 0;
     text-align: center; }
+  #main-body h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    margin: .25rem; }
   #main-body a {
     color: #007AE7; }
   #main-body a:visited {
@@ -53,38 +58,82 @@ header {
     clear: both;
     max-width: 90%;
     margin: auto; }
-  #main-body ul {
+  #main-body .projectList {
     list-style: none;
     padding: 1rem;
     margin: 0;
     font-size: 1rem; }
-    #main-body ul li {
+    #main-body .projectList li {
       width: 80%;
       text-align: center;
       margin: .5rem auto;
       border: 2px solid #007AE7;
       border-radius: 5px;
       padding: 5px; }
-      #main-body ul li h4 {
+      #main-body .projectList li h4 {
         padding: 0;
         margin: 0; }
-      #main-body ul li .list-icon {
+      #main-body .projectList li .list-icon {
         width: 75px;
         height: 75px;
         float: left;
         padding: 0 5px 0 0; }
-    #main-body ul li:hover {
+    #main-body .projectList li:hover {
       border: 2px solid #00A8E8; }
 
 /* Styles for the Treehouse pie */
 .pieChart {
-  width: 6rem;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding: 0; }
 
 .pie {
   height: 5rem;
-  width: 5rem; }
+  width: 5rem;
+  position: relative; }
+  .pie::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    top: 1.5rem;
+    left: 1.5rem; }
+
+.slice {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  clip: rect(0px, 5rem, 5rem, 2.5rem); }
+  .slice span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    clip: rect(0px, 5rem, 5rem, 2.5rem); }
+
+#chartLegend {
+  list-style: none; }
+  #chartLegend li {
+    border-left: 1em solid black;
+    padding: 0 0.5em;
+    margin: .25em 0; }
+    #chartLegend li span {
+      margin-left: 1em;
+      float: right;
+      font-weight: bold; }
+
+.legend-icon {
+  width: 1em;
+  height: 0;
+  padding-bottom: 1em; }
 
 /* Main styles for the Footer */
 footer {

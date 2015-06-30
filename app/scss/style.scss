@@ -70,6 +70,13 @@ header {
         text-align: center;
     }
 
+    h4 {
+        font-size: 1rem;
+        font-weight: normal;
+        text-align: center;
+        margin: .25rem;
+    }
+
     a {
         color: $mainColor;
     }
@@ -88,7 +95,7 @@ header {
        margin: auto;
    }
 
-    ul {
+    .projectList {
         list-style: none;
         padding: 1rem;
         margin: 0;
@@ -123,11 +130,12 @@ header {
 
 /* Styles for the Treehouse pie */
 $size-pie: 5rem;
-$size-width: 1rem;
+$size-width: 1.5rem;
 $size-inner: $size-pie - $size-width * 2;
 
 .pieChart {
-    width: $size-pie + 1rem;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     padding: 0;
 }
@@ -135,6 +143,60 @@ $size-inner: $size-pie - $size-width * 2;
 .pie {
     height: $size-pie;
     width: $size-pie;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: $size-inner;
+        height: $size-inner;
+        background: $secondaryBackground;
+        border-radius: 50%;
+        top: $size-width;
+        left: $size-width;
+    }
+}
+
+.slice {
+    position: absolute;
+    width: $size-pie;
+    height: $size-pie;
+    clip: rect(0px, $size-pie, $size-pie, $size-pie/2);
+
+    span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: $size-pie;
+        height: $size-pie;
+        border-radius: 50%;
+        clip: rect(0px, $size-pie, $size-pie, $size-pie/2);
+    }
+}
+
+#chartLegend {
+    list-style: none;
+
+    li {
+        border-left: 1em solid black;
+        padding: 0 .5em;
+        margin: .25em 0;
+
+        span {
+            margin-left: 1em;
+            float: right;
+            font-weight: bold;
+        }
+    }
+}
+
+.legend-icon {
+    width: 1em;
+    height: 0;
+    padding-bottom: 1em;
 }
 
 /* Main styles for the Footer */
