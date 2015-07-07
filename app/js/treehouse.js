@@ -46,7 +46,7 @@ $(document).ready(function() {
         $(".total").html(total);
 
         for (var pointValue in points) {
-            chartTotal += points[pointValue]
+            chartTotal += points[pointValue];
         }
 
         chartTotal -= total;
