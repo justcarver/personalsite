@@ -6,11 +6,9 @@ $mainHighlight: #00A8E8;
 $mainVisited: #003459;
 
 #score {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     max-width: 500px;
-    margin: auto;
+    margin: 8px auto;
 
     button {
         color: $secondaryBackground;
@@ -19,6 +17,7 @@ $mainVisited: #003459;
         border-radius: 3px;
         box-shadow: 2px 3px 1px darken($mainColor,10%);
         border: 0;
+        float: left;
     }
     
     button:hover {
@@ -28,10 +27,17 @@ $mainVisited: #003459;
 
    #scoreDisplay {
         padding: .5rem 0 .5rem 1rem;
+        float: right;
     }
 
     #clickNumber {
         padding: .5rem 1rem .5rem 0;
+    }
+
+    &:after {
+        clear:both;
+        content: "";
+        display: table;
     }
 }
 
@@ -39,14 +45,13 @@ $mainVisited: #003459;
     width: 100%;
     max-width: 500px;
     margin: auto;
-    display: flex;
-    flex-flow: row wrap;
 
     div {
-        width: 16%;
+        display: inline-block;
+        width: 15%;
         height: 0;
-        padding-bottom: 16%;
-        margin: 2%;
+        padding-bottom: 15%;
+        margin: 1.5%;
         background-color: $mainVisited;
         border-radius: 10px;
         box-shadow: inset .25em .25em 5px $mainColor;
@@ -63,6 +68,12 @@ $mainVisited: #003459;
 
     .selected:hover {
         background-color: lighten($mainHighlight,10%);
+    }
+
+    &:after {
+        clear:both;
+        content: "";
+        display: table;
     }
 }
 
