@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $.getJSON('http://teamtreehouse.com/justincarver.json', function (treehouse) {
+        // Parse the JSON object into usable variables
         var offset = 0 - 1;
         var name = treehouse.name;
         var points = treehouse.points; /* Directs to the points object */
@@ -20,6 +21,7 @@ $(document).ready(function() {
             "Java" : points.Java,
             "Digital Literacy" : points["Digital Literacy"]
         };
+        //Build the HTML pieces
         var legendHtml = '<ul id="chartLegend">';
         var pieHTML = "";
         var counter = 0;
@@ -43,14 +45,17 @@ $(document).ready(function() {
             'Digital Literacy' : '#c38cd4'
         };
 
+        //Add the total points from the API
         $(".total").html(total);
 
+        //Compensate for difference in the Total Treehouse Points and the points displayed on the chart
         for (var pointValue in points) {
             chartTotal += points[pointValue];
         }
 
         chartTotal -= total;
 
+        // build the pie chart HTML
         for (var key in pointsObj) {
             if (pointsObj[key] !== 0) {
                 var sliceCount = 0;
@@ -76,6 +81,8 @@ $(document).ready(function() {
         }
 
         legendHtml += "</ul>";
+
+        //Append the pie chart to the DOM and hide the loading animation
         $(".legend").html(legendHtml);
         $(".loader").hide();
     });
