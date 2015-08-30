@@ -217,10 +217,17 @@ $size-inner: $size-pie - $size-width * 2;
     }
 }
 
+.badge-display {
+    max-width: 500px;
+    margin: auto;
+}
+
 .badge {
     position: relative;
-    width: 90px;
-    height: 98.1px;
+    width: 18%;
+    height: 21%;
+    max-width: 90px;
+    max-height: 98.1px;
     display: inline-block;
     padding: 3px;
 
