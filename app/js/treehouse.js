@@ -21,9 +21,12 @@ $(document).ready(function() {
             "Java" : points.Java,
             "Digital Literacy" : points["Digital Literacy"]
         };
+        var badges = treehouse.badges; /* Gets the Badges object */
+
         //Build the HTML pieces
         var legendHtml = '<ul id="chartLegend">';
-        var pieHTML = "";
+        var badgeHtml = '<h3>Recent Treehouse Badges</h3>';
+        var pieHTML = '';
         var counter = 0;
         var sliceSize;
         var sliceRoation;
@@ -75,15 +78,29 @@ $(document).ready(function() {
                     "background-color" : colors[key]
                 });
                 counter += 1;
-                console.log(sliceSize);
                 offset += sliceSize;
             }
         }
 
         legendHtml += "</ul>";
 
+        for (var i=1; i<=10; i++ ) {
+            var index = badges.length - i;
+            var badge = badges[index];
+            var date = new Date(badge.earned_date);
+            var datetext = date.getMonth() + 1;
+            datetext += "/";
+            datetext += date.getDate();
+            datetext += "/";
+            datetext += date.getFullYear();
+            badgeHtml += '<div class="badge"><img src=' + badge.icon_url + ' alt="' + badge.name + '">';
+            badgeHtml += '<div class="badge-info"><span class="badge-name">' + badge.name +'</span>';
+            badgeHtml += '<span class="badge-date">' + datetext + '</span></div></div>';
+        }
+
         //Append the pie chart to the DOM and hide the loading animation
         $(".legend").html(legendHtml);
+        $(".badge-display").html(badgeHtml);
         $(".loader").hide();
     });
 });
