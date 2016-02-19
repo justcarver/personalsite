@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON('http://teamtreehouse.com/justincarver.json', function (treehouse) {
+    $.getJSON('https://teamtreehouse.com/justincarver.json', function (treehouse) {
         // Parse the JSON object into usable variables
         var offset = 0 - 1;
         var name = treehouse.name;
@@ -19,7 +19,10 @@ $(document).ready(function() {
             "Business" : points.Business,
             "Python" : points.Python,
             "Java" : points.Java,
-            "Digital Literacy" : points["Digital Literacy"]
+            "Digital Literacy" : points["Digital Literacy"],
+	    "Game Dev" : points["Game Development"],
+	    "C#" : points["C#"],
+	    "Databases" : points.Databases
         };
         var badges = treehouse.badges; /* Gets the Badges object */
 
@@ -45,7 +48,10 @@ $(document).ready(function() {
             'Python' : '#f092b0',
             'Ruby' : '#e15258',
             'WordPress' : '#838cc7',
-            'Digital Literacy' : '#c38cd4'
+            'Digital Literacy' : '#c38cd4',
+	    'Game Dev' : '#20898C',
+	    'C#' : '#9E4D83',
+	    'Databases' : '#EB7728'
         };
 
         //Add the total points from the API
